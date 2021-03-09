@@ -2,6 +2,8 @@
  */
 package dsm.oscal.model.Oscal;
 
+import java.net.URI;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Partition</b></em>'.
@@ -85,12 +87,12 @@ public interface Partition extends PropertyOwner, AnnotationOwner, LinkOwner {
 	 * A namespace qualifying the part's name. This allows different organizations to associate distinct semantics with the same name
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ns</em>' attribute.
-	 * @see #setNs(String)
+	 * @see #setNs(URI)
 	 * @see dsm.oscal.model.Oscal.OscalPackage#getPartition_Ns()
-	 * @model
+	 * @model dataType="dsm.oscal.model.Oscal.URI"
 	 * @generated
 	 */
-	String getNs();
+	URI getNs();
 
 	/**
 	 * Sets the value of the '{@link dsm.oscal.model.Oscal.Partition#getNs <em>Ns</em>}' attribute.
@@ -100,7 +102,7 @@ public interface Partition extends PropertyOwner, AnnotationOwner, LinkOwner {
 	 * @see #getNs()
 	 * @generated
 	 */
-	void setNs(String value);
+	void setNs(URI value);
 
 	/**
 	 * Returns the value of the '<em><b>Class</b></em>' attribute.

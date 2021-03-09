@@ -441,6 +441,13 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 	private EDataType uuidEDataType = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType uriEDataType = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -2561,6 +2568,15 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getURI() {
+		return uriEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public OscalFactory getOscalFactory() {
 		return (OscalFactory) getEFactoryInstance();
 	}
@@ -2863,6 +2879,7 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 		markupMultilineEDataType = createEDataType(MARKUP_MULTILINE);
 		base64BinaryEDataType = createEDataType(BASE64_BINARY);
 		uuidEDataType = createEDataType(UUID);
+		uriEDataType = createEDataType(URI);
 	}
 
 	/**
@@ -3097,7 +3114,7 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAnnotation_Uuid(), this.getUUID(), "uuid", null, 0, 1, Annotation.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAnnotation_Ns(), ecorePackage.getEString(), "ns", null, 0, 1, Annotation.class, !IS_TRANSIENT,
+		initEAttribute(getAnnotation_Ns(), this.getURI(), "ns", null, 0, 1, Annotation.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAnnotation_Value(), ecorePackage.getEString(), "value", null, 1, 1, Annotation.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3118,8 +3135,8 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProperty_Name(), ecorePackage.getEString(), "name", null, 0, 1, Property.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProperty_Ns(), ecorePackage.getEString(), "ns", null, 0, 1, Property.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProperty_Ns(), this.getURI(), "ns", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProperty_Class(), ecorePackage.getEString(), "class", null, 0, 1, Property.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProperty_Description(), ecorePackage.getEString(), "description", null, 0, 1, Property.class,
@@ -3229,8 +3246,8 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPartition_Id(), ecorePackage.getEString(), "id", null, 0, 1, Partition.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPartition_Ns(), ecorePackage.getEString(), "ns", null, 0, 1, Partition.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPartition_Ns(), this.getURI(), "ns", null, 0, 1, Partition.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPartition_Class(), ecorePackage.getEString(), "class", null, 0, 1, Partition.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPartition_Title(), ecorePackage.getEString(), "title", null, 0, 1, Partition.class,
@@ -3496,6 +3513,7 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 		initEDataType(base64BinaryEDataType, byte[].class, "Base64Binary", IS_SERIALIZABLE,
 				!IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(uuidEDataType, java.util.UUID.class, "UUID", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(uriEDataType, java.net.URI.class, "URI", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

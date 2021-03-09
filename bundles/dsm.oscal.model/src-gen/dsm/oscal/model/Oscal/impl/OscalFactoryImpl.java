@@ -4,6 +4,7 @@ package dsm.oscal.model.Oscal.impl;
 
 import dsm.oscal.model.Oscal.*;
 
+import java.net.URI;
 import java.util.UUID;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -168,6 +169,8 @@ public class OscalFactoryImpl extends EFactoryImpl implements OscalFactory {
 			return createBase64BinaryFromString(eDataType, initialValue);
 		case OscalPackage.UUID:
 			return createUUIDFromString(eDataType, initialValue);
+		case OscalPackage.URI:
+			return createURIFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -189,6 +192,8 @@ public class OscalFactoryImpl extends EFactoryImpl implements OscalFactory {
 			return convertBase64BinaryToString(eDataType, instanceValue);
 		case OscalPackage.UUID:
 			return convertUUIDToString(eDataType, instanceValue);
+		case OscalPackage.URI:
+			return convertURIToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -704,7 +709,7 @@ public class OscalFactoryImpl extends EFactoryImpl implements OscalFactory {
 	 * @generated
 	 */
 	public UUID createUUID(final String it) {
-		return java.util.UUID.fromString(it);
+		return dsm.oscal.model.DataTypeFactory.createUUIDFromString(it);
 	}
 
 	/**
@@ -722,7 +727,7 @@ public class OscalFactoryImpl extends EFactoryImpl implements OscalFactory {
 	 * @generated
 	 */
 	public String convertUUID(final UUID it) {
-		return it != null ? it.toString() : null;
+		return dsm.oscal.model.DataTypeFactory.createStringFromUUID(it);
 	}
 
 	/**
@@ -732,6 +737,42 @@ public class OscalFactoryImpl extends EFactoryImpl implements OscalFactory {
 	 */
 	public String convertUUIDToString(EDataType eDataType, Object instanceValue) {
 		return convertUUID((UUID) instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public URI createURI(final String it) {
+		return dsm.oscal.model.DataTypeFactory.createURIFromString(it);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public URI createURIFromString(EDataType eDataType, String initialValue) {
+		return createURI(initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertURI(final URI it) {
+		return dsm.oscal.model.DataTypeFactory.createStringFromURI(it);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertURIToString(EDataType eDataType, Object instanceValue) {
+		return convertURI((URI) instanceValue);
 	}
 
 	/**

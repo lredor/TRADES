@@ -6,6 +6,7 @@ import dsm.oscal.model.Oscal.Annotation;
 import dsm.oscal.model.Oscal.OscalPackage;
 import dsm.oscal.model.Oscal.Remark;
 
+import java.net.URI;
 import java.util.UUID;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -82,7 +83,7 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NS_EDEFAULT = null;
+	protected static final URI NS_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getNs() <em>Ns</em>}' attribute.
@@ -92,7 +93,7 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
 	 * @generated
 	 * @ordered
 	 */
-	protected String ns = NS_EDEFAULT;
+	protected URI ns = NS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -190,7 +191,7 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNs() {
+	public URI getNs() {
 		return ns;
 	}
 
@@ -199,8 +200,8 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNs(String newNs) {
-		String oldNs = ns;
+	public void setNs(URI newNs) {
+		URI oldNs = ns;
 		ns = newNs;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, OscalPackage.ANNOTATION__NS, oldNs, ns));
@@ -328,7 +329,7 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
 			setUuid((UUID) newValue);
 			return;
 		case OscalPackage.ANNOTATION__NS:
-			setNs((String) newValue);
+			setNs((URI) newValue);
 			return;
 		case OscalPackage.ANNOTATION__VALUE:
 			setValue((String) newValue);

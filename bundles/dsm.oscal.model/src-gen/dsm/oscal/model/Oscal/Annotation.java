@@ -2,6 +2,7 @@
  */
 package dsm.oscal.model.Oscal;
 
+import java.net.URI;
 import java.util.UUID;
 import org.eclipse.emf.ecore.EObject;
 
@@ -88,12 +89,12 @@ public interface Annotation extends EObject {
 	 * A namespace qualifying the annotated property's name. This allows different organizations to associate distinct semantics with the same name
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ns</em>' attribute.
-	 * @see #setNs(String)
+	 * @see #setNs(URI)
 	 * @see dsm.oscal.model.Oscal.OscalPackage#getAnnotation_Ns()
-	 * @model
+	 * @model dataType="dsm.oscal.model.Oscal.URI"
 	 * @generated
 	 */
-	String getNs();
+	URI getNs();
 
 	/**
 	 * Sets the value of the '{@link dsm.oscal.model.Oscal.Annotation#getNs <em>Ns</em>}' attribute.
@@ -103,7 +104,7 @@ public interface Annotation extends EObject {
 	 * @see #getNs()
 	 * @generated
 	 */
-	void setNs(String value);
+	void setNs(URI value);
 
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.

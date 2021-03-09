@@ -9,6 +9,7 @@ import dsm.oscal.model.Oscal.LinkOwner;
 import dsm.oscal.model.Oscal.OscalPackage;
 import dsm.oscal.model.Oscal.Partition;
 
+import java.net.URI;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -112,7 +113,7 @@ public class PartitionImpl extends PropertyOwnerImpl implements Partition {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NS_EDEFAULT = null;
+	protected static final URI NS_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getNs() <em>Ns</em>}' attribute.
@@ -122,7 +123,7 @@ public class PartitionImpl extends PropertyOwnerImpl implements Partition {
 	 * @generated
 	 * @ordered
 	 */
-	protected String ns = NS_EDEFAULT;
+	protected URI ns = NS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getClass_() <em>Class</em>}' attribute.
@@ -255,7 +256,7 @@ public class PartitionImpl extends PropertyOwnerImpl implements Partition {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNs() {
+	public URI getNs() {
 		return ns;
 	}
 
@@ -264,8 +265,8 @@ public class PartitionImpl extends PropertyOwnerImpl implements Partition {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNs(String newNs) {
-		String oldNs = ns;
+	public void setNs(URI newNs) {
+		URI oldNs = ns;
 		ns = newNs;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, OscalPackage.PARTITION__NS, oldNs, ns));
@@ -379,7 +380,7 @@ public class PartitionImpl extends PropertyOwnerImpl implements Partition {
 			setId((String) newValue);
 			return;
 		case OscalPackage.PARTITION__NS:
-			setNs((String) newValue);
+			setNs((URI) newValue);
 			return;
 		case OscalPackage.PARTITION__CLASS:
 			setClass((String) newValue);

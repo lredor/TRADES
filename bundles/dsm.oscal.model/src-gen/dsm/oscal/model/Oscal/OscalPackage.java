@@ -3458,6 +3458,16 @@ public interface OscalPackage extends EPackage {
 	int UUID = 52;
 
 	/**
+	 * The meta object id for the '<em>URI</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.net.URI
+	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getURI()
+	 * @generated
+	 */
+	int URI = 53;
+
+	/**
 	 * Returns the meta object for class '{@link dsm.oscal.model.Oscal.Link <em>Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5916,6 +5926,17 @@ public interface OscalPackage extends EPackage {
 	EDataType getUUID();
 
 	/**
+	 * Returns the meta object for data type '{@link java.net.URI <em>URI</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>URI</em>'.
+	 * @see java.net.URI
+	 * @model instanceClass="java.net.URI"
+	 * @generated
+	 */
+	EDataType getURI();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7866,6 +7887,16 @@ public interface OscalPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType UUID = eINSTANCE.getUUID();
+
+		/**
+		 * The meta object literal for the '<em>URI</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.net.URI
+		 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getURI()
+		 * @generated
+		 */
+		EDataType URI = eINSTANCE.getURI();
 
 	}
 
