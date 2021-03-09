@@ -7,7 +7,6 @@ import dsm.oscal.model.Oscal.AnnotationOwner;
 import dsm.oscal.model.Oscal.ControlDefinition;
 import dsm.oscal.model.Oscal.Link;
 import dsm.oscal.model.Oscal.LinkOwner;
-import dsm.oscal.model.Oscal.NamedElement;
 import dsm.oscal.model.Oscal.OscalPackage;
 import dsm.oscal.model.Oscal.Parameter;
 import dsm.oscal.model.Oscal.ParameterOwner;
@@ -39,7 +38,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link dsm.oscal.model.Oscal.impl.ControlDefinitionImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link dsm.oscal.model.Oscal.impl.ControlDefinitionImpl#getAnnotations <em>Annotations</em>}</li>
  *   <li>{@link dsm.oscal.model.Oscal.impl.ControlDefinitionImpl#getLinks <em>Links</em>}</li>
- *   <li>{@link dsm.oscal.model.Oscal.impl.ControlDefinitionImpl#getName <em>Name</em>}</li>
  *   <li>{@link dsm.oscal.model.Oscal.impl.ControlDefinitionImpl#getId <em>Id</em>}</li>
  *   <li>{@link dsm.oscal.model.Oscal.impl.ControlDefinitionImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link dsm.oscal.model.Oscal.impl.ControlDefinitionImpl#getParts <em>Parts</em>}</li>
@@ -78,26 +76,6 @@ public class ControlDefinitionImpl extends PropertyOwnerImpl implements ControlD
 	 * @ordered
 	 */
 	protected EList<Link> links;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -221,28 +199,6 @@ public class ControlDefinitionImpl extends PropertyOwnerImpl implements ControlD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OscalPackage.CONTROL_DEFINITION__NAME, oldName,
-					name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getId() {
 		return id;
 	}
@@ -343,8 +299,6 @@ public class ControlDefinitionImpl extends PropertyOwnerImpl implements ControlD
 			return getAnnotations();
 		case OscalPackage.CONTROL_DEFINITION__LINKS:
 			return getLinks();
-		case OscalPackage.CONTROL_DEFINITION__NAME:
-			return getName();
 		case OscalPackage.CONTROL_DEFINITION__ID:
 			return getId();
 		case OscalPackage.CONTROL_DEFINITION__TITLE:
@@ -377,9 +331,6 @@ public class ControlDefinitionImpl extends PropertyOwnerImpl implements ControlD
 		case OscalPackage.CONTROL_DEFINITION__LINKS:
 			getLinks().clear();
 			getLinks().addAll((Collection<? extends Link>) newValue);
-			return;
-		case OscalPackage.CONTROL_DEFINITION__NAME:
-			setName((String) newValue);
 			return;
 		case OscalPackage.CONTROL_DEFINITION__ID:
 			setId((String) newValue);
@@ -416,9 +367,6 @@ public class ControlDefinitionImpl extends PropertyOwnerImpl implements ControlD
 		case OscalPackage.CONTROL_DEFINITION__LINKS:
 			getLinks().clear();
 			return;
-		case OscalPackage.CONTROL_DEFINITION__NAME:
-			setName(NAME_EDEFAULT);
-			return;
 		case OscalPackage.CONTROL_DEFINITION__ID:
 			setId(ID_EDEFAULT);
 			return;
@@ -449,8 +397,6 @@ public class ControlDefinitionImpl extends PropertyOwnerImpl implements ControlD
 			return annotations != null && !annotations.isEmpty();
 		case OscalPackage.CONTROL_DEFINITION__LINKS:
 			return links != null && !links.isEmpty();
-		case OscalPackage.CONTROL_DEFINITION__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case OscalPackage.CONTROL_DEFINITION__ID:
 			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		case OscalPackage.CONTROL_DEFINITION__TITLE:
@@ -494,14 +440,6 @@ public class ControlDefinitionImpl extends PropertyOwnerImpl implements ControlD
 				return -1;
 			}
 		}
-		if (baseClass == NamedElement.class) {
-			switch (derivedFeatureID) {
-			case OscalPackage.CONTROL_DEFINITION__NAME:
-				return OscalPackage.NAMED_ELEMENT__NAME;
-			default:
-				return -1;
-			}
-		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -536,14 +474,6 @@ public class ControlDefinitionImpl extends PropertyOwnerImpl implements ControlD
 				return -1;
 			}
 		}
-		if (baseClass == NamedElement.class) {
-			switch (baseFeatureID) {
-			case OscalPackage.NAMED_ELEMENT__NAME:
-				return OscalPackage.CONTROL_DEFINITION__NAME;
-			default:
-				return -1;
-			}
-		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
@@ -558,9 +488,7 @@ public class ControlDefinitionImpl extends PropertyOwnerImpl implements ControlD
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", id: ");
+		result.append(" (id: ");
 		result.append(id);
 		result.append(", title: ");
 		result.append(title);

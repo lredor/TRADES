@@ -341,22 +341,13 @@ public interface OscalPackage extends EPackage {
 	int CONTROL_DEFINITION__LINKS = PROPERTY_OWNER_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL_DEFINITION__NAME = PROPERTY_OWNER_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_DEFINITION__ID = PROPERTY_OWNER_FEATURE_COUNT + 4;
+	int CONTROL_DEFINITION__ID = PROPERTY_OWNER_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -365,7 +356,7 @@ public interface OscalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_DEFINITION__TITLE = PROPERTY_OWNER_FEATURE_COUNT + 5;
+	int CONTROL_DEFINITION__TITLE = PROPERTY_OWNER_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Parts</b></em>' containment reference list.
@@ -374,7 +365,7 @@ public interface OscalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_DEFINITION__PARTS = PROPERTY_OWNER_FEATURE_COUNT + 6;
+	int CONTROL_DEFINITION__PARTS = PROPERTY_OWNER_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Controls Definition</b></em>' containment reference list.
@@ -383,7 +374,7 @@ public interface OscalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_DEFINITION__CONTROLS_DEFINITION = PROPERTY_OWNER_FEATURE_COUNT + 7;
+	int CONTROL_DEFINITION__CONTROLS_DEFINITION = PROPERTY_OWNER_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>Control Definition</em>' class.
@@ -392,7 +383,7 @@ public interface OscalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROL_DEFINITION_FEATURE_COUNT = PROPERTY_OWNER_FEATURE_COUNT + 8;
+	int CONTROL_DEFINITION_FEATURE_COUNT = PROPERTY_OWNER_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Control Definition</em>' class.

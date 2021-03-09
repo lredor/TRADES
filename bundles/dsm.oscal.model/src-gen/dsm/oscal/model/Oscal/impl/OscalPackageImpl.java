@@ -2933,7 +2933,6 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 		controlDefinitionEClass.getESuperTypes().add(this.getParameterOwner());
 		controlDefinitionEClass.getESuperTypes().add(this.getAnnotationOwner());
 		controlDefinitionEClass.getESuperTypes().add(this.getLinkOwner());
-		controlDefinitionEClass.getESuperTypes().add(this.getNamedElement());
 		roleEClass.getESuperTypes().add(this.getPropertyOwner());
 		roleEClass.getESuperTypes().add(this.getAnnotationOwner());
 		roleEClass.getESuperTypes().add(this.getLinkOwner());
