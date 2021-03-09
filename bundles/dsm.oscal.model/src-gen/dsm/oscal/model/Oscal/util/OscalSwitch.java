@@ -169,8 +169,6 @@ public class OscalSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseLinkOwner(group);
 			if (result == null)
-				result = caseNamedElement(group);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}

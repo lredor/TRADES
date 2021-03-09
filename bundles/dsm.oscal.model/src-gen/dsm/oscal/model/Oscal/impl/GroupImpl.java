@@ -8,7 +8,6 @@ import dsm.oscal.model.Oscal.ControlDefinition;
 import dsm.oscal.model.Oscal.Group;
 import dsm.oscal.model.Oscal.Link;
 import dsm.oscal.model.Oscal.LinkOwner;
-import dsm.oscal.model.Oscal.NamedElement;
 import dsm.oscal.model.Oscal.OscalPackage;
 import dsm.oscal.model.Oscal.Parameter;
 import dsm.oscal.model.Oscal.ParameterOwner;
@@ -40,7 +39,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link dsm.oscal.model.Oscal.impl.GroupImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link dsm.oscal.model.Oscal.impl.GroupImpl#getAnnotations <em>Annotations</em>}</li>
  *   <li>{@link dsm.oscal.model.Oscal.impl.GroupImpl#getLinks <em>Links</em>}</li>
- *   <li>{@link dsm.oscal.model.Oscal.impl.GroupImpl#getName <em>Name</em>}</li>
  *   <li>{@link dsm.oscal.model.Oscal.impl.GroupImpl#getId <em>Id</em>}</li>
  *   <li>{@link dsm.oscal.model.Oscal.impl.GroupImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link dsm.oscal.model.Oscal.impl.GroupImpl#getPartitions <em>Partitions</em>}</li>
@@ -80,26 +78,6 @@ public class GroupImpl extends PropertyOwnerImpl implements Group {
 	 * @ordered
 	 */
 	protected EList<Link> links;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -232,27 +210,6 @@ public class GroupImpl extends PropertyOwnerImpl implements Group {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OscalPackage.GROUP__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getId() {
 		return id;
 	}
@@ -365,8 +322,6 @@ public class GroupImpl extends PropertyOwnerImpl implements Group {
 			return getAnnotations();
 		case OscalPackage.GROUP__LINKS:
 			return getLinks();
-		case OscalPackage.GROUP__NAME:
-			return getName();
 		case OscalPackage.GROUP__ID:
 			return getId();
 		case OscalPackage.GROUP__TITLE:
@@ -401,9 +356,6 @@ public class GroupImpl extends PropertyOwnerImpl implements Group {
 		case OscalPackage.GROUP__LINKS:
 			getLinks().clear();
 			getLinks().addAll((Collection<? extends Link>) newValue);
-			return;
-		case OscalPackage.GROUP__NAME:
-			setName((String) newValue);
 			return;
 		case OscalPackage.GROUP__ID:
 			setId((String) newValue);
@@ -444,9 +396,6 @@ public class GroupImpl extends PropertyOwnerImpl implements Group {
 		case OscalPackage.GROUP__LINKS:
 			getLinks().clear();
 			return;
-		case OscalPackage.GROUP__NAME:
-			setName(NAME_EDEFAULT);
-			return;
 		case OscalPackage.GROUP__ID:
 			setId(ID_EDEFAULT);
 			return;
@@ -480,8 +429,6 @@ public class GroupImpl extends PropertyOwnerImpl implements Group {
 			return annotations != null && !annotations.isEmpty();
 		case OscalPackage.GROUP__LINKS:
 			return links != null && !links.isEmpty();
-		case OscalPackage.GROUP__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case OscalPackage.GROUP__ID:
 			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		case OscalPackage.GROUP__TITLE:
@@ -527,14 +474,6 @@ public class GroupImpl extends PropertyOwnerImpl implements Group {
 				return -1;
 			}
 		}
-		if (baseClass == NamedElement.class) {
-			switch (derivedFeatureID) {
-			case OscalPackage.GROUP__NAME:
-				return OscalPackage.NAMED_ELEMENT__NAME;
-			default:
-				return -1;
-			}
-		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -569,14 +508,6 @@ public class GroupImpl extends PropertyOwnerImpl implements Group {
 				return -1;
 			}
 		}
-		if (baseClass == NamedElement.class) {
-			switch (baseFeatureID) {
-			case OscalPackage.NAMED_ELEMENT__NAME:
-				return OscalPackage.GROUP__NAME;
-			default:
-				return -1;
-			}
-		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
@@ -591,9 +522,7 @@ public class GroupImpl extends PropertyOwnerImpl implements Group {
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", id: ");
+		result.append(" (id: ");
 		result.append(id);
 		result.append(", title: ");
 		result.append(title);

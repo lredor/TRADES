@@ -28,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Group extends PropertyOwner, ParameterOwner, AnnotationOwner, LinkOwner, NamedElement {
+public interface Group extends PropertyOwner, ParameterOwner, AnnotationOwner, LinkOwner {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->

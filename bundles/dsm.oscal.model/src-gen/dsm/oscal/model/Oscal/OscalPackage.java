@@ -916,22 +916,13 @@ public interface OscalPackage extends EPackage {
 	int GROUP__LINKS = PROPERTY_OWNER_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GROUP__NAME = PROPERTY_OWNER_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__ID = PROPERTY_OWNER_FEATURE_COUNT + 4;
+	int GROUP__ID = PROPERTY_OWNER_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -940,7 +931,7 @@ public interface OscalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__TITLE = PROPERTY_OWNER_FEATURE_COUNT + 5;
+	int GROUP__TITLE = PROPERTY_OWNER_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Partitions</b></em>' containment reference list.
@@ -949,7 +940,7 @@ public interface OscalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__PARTITIONS = PROPERTY_OWNER_FEATURE_COUNT + 6;
+	int GROUP__PARTITIONS = PROPERTY_OWNER_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Groups</b></em>' containment reference list.
@@ -958,7 +949,7 @@ public interface OscalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__GROUPS = PROPERTY_OWNER_FEATURE_COUNT + 7;
+	int GROUP__GROUPS = PROPERTY_OWNER_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Controls Definition</b></em>' containment reference list.
@@ -967,7 +958,7 @@ public interface OscalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__CONTROLS_DEFINITION = PROPERTY_OWNER_FEATURE_COUNT + 8;
+	int GROUP__CONTROLS_DEFINITION = PROPERTY_OWNER_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Group</em>' class.
@@ -976,7 +967,7 @@ public interface OscalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_FEATURE_COUNT = PROPERTY_OWNER_FEATURE_COUNT + 9;
+	int GROUP_FEATURE_COUNT = PROPERTY_OWNER_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Group</em>' class.
