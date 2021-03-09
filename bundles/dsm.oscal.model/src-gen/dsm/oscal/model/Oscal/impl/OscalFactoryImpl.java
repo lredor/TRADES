@@ -96,8 +96,6 @@ public class OscalFactoryImpl extends EFactoryImpl implements OscalFactory {
 			return createExternalId();
 		case OscalPackage.RESPONSIBLE_PARTY:
 			return createResponsibleParty();
-		case OscalPackage.CONSTRAINT:
-			return createConstraint();
 		case OscalPackage.TEST:
 			return createTest();
 		case OscalPackage.PARTITION:
@@ -138,8 +136,8 @@ public class OscalFactoryImpl extends EFactoryImpl implements OscalFactory {
 			return createCustom();
 		case OscalPackage.SET_PARAMETER:
 			return createSetParameter();
-		case OscalPackage.OSCAL_CONSTRAINT:
-			return createOSCALConstraint();
+		case OscalPackage.CONSTRAINT:
+			return createConstraint();
 		case OscalPackage.ALTER:
 			return createAlter();
 		case OscalPackage.REMOVE:
@@ -396,16 +394,6 @@ public class OscalFactoryImpl extends EFactoryImpl implements OscalFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Constraint createConstraint() {
-		ConstraintImpl constraint = new ConstraintImpl();
-		return constraint;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Test createTest() {
 		TestImpl test = new TestImpl();
 		return test;
@@ -606,9 +594,9 @@ public class OscalFactoryImpl extends EFactoryImpl implements OscalFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OSCALConstraint createOSCALConstraint() {
-		OSCALConstraintImpl oscalConstraint = new OSCALConstraintImpl();
-		return oscalConstraint;
+	public Constraint createConstraint() {
+		ConstraintImpl constraint = new ConstraintImpl();
+		return constraint;
 	}
 
 	/**

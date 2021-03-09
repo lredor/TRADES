@@ -167,11 +167,6 @@ public class OscalAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseConstraint(Constraint object) {
-			return createConstraintAdapter();
-		}
-
-		@Override
 		public Adapter caseTest(Test object) {
 			return createTestAdapter();
 		}
@@ -292,8 +287,8 @@ public class OscalAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseOSCALConstraint(OSCALConstraint object) {
-			return createOSCALConstraintAdapter();
+		public Adapter caseConstraint(Constraint object) {
+			return createConstraintAdapter();
 		}
 
 		@Override
@@ -612,20 +607,6 @@ public class OscalAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createResponsiblePartyAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link dsm.oscal.model.Oscal.Constraint <em>Constraint</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see dsm.oscal.model.Oscal.Constraint
-	 * @generated
-	 */
-	public Adapter createConstraintAdapter() {
 		return null;
 	}
 
@@ -966,16 +947,16 @@ public class OscalAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link dsm.oscal.model.Oscal.OSCALConstraint <em>OSCAL Constraint</em>}'.
+	 * Creates a new adapter for an object of class '{@link dsm.oscal.model.Oscal.Constraint <em>Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see dsm.oscal.model.Oscal.OSCALConstraint
+	 * @see dsm.oscal.model.Oscal.Constraint
 	 * @generated
 	 */
-	public Adapter createOSCALConstraintAdapter() {
+	public Adapter createConstraintAdapter() {
 		return null;
 	}
 

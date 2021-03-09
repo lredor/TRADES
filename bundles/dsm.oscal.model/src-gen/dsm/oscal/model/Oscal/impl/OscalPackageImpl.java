@@ -32,7 +32,6 @@ import dsm.oscal.model.Oscal.Merge;
 import dsm.oscal.model.Oscal.Metadata;
 import dsm.oscal.model.Oscal.Modify;
 import dsm.oscal.model.Oscal.NamedElement;
-import dsm.oscal.model.Oscal.OSCALConstraint;
 import dsm.oscal.model.Oscal.OscalFactory;
 import dsm.oscal.model.Oscal.OscalPackage;
 import dsm.oscal.model.Oscal.Parameter;
@@ -215,13 +214,6 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass constraintEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass testEClass = null;
 
 	/**
@@ -390,7 +382,7 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass oscalConstraintEClass = null;
+	private EClass constraintEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -609,17 +601,8 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getParameter_Constraints() {
-		return (EReference) parameterEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getParameter_Guideline() {
-		return (EAttribute) parameterEClass.getEStructuralFeatures().get(6);
+		return (EAttribute) parameterEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -628,7 +611,7 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 	 * @generated
 	 */
 	public EAttribute getParameter_Value() {
-		return (EAttribute) parameterEClass.getEStructuralFeatures().get(7);
+		return (EAttribute) parameterEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -637,7 +620,7 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 	 * @generated
 	 */
 	public EReference getParameter_Select() {
-		return (EReference) parameterEClass.getEStructuralFeatures().get(8);
+		return (EReference) parameterEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -1536,33 +1519,6 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getConstraint() {
-		return constraintEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getConstraint_Description() {
-		return (EAttribute) constraintEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConstraint_Tests() {
-		return (EReference) constraintEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTest() {
 		return testEClass;
 	}
@@ -2391,8 +2347,8 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getOSCALConstraint() {
-		return oscalConstraintEClass;
+	public EClass getConstraint() {
+		return constraintEClass;
 	}
 
 	/**
@@ -2400,8 +2356,8 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getOSCALConstraint_Description() {
-		return (EAttribute) oscalConstraintEClass.getEStructuralFeatures().get(0);
+	public EAttribute getConstraint_Description() {
+		return (EAttribute) constraintEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2409,8 +2365,8 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOSCALConstraint_Tests() {
-		return (EReference) oscalConstraintEClass.getEStructuralFeatures().get(1);
+	public EReference getConstraint_Tests() {
+		return (EReference) constraintEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2625,7 +2581,6 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 		createEAttribute(parameterEClass, PARAMETER__DEPENDS_ON);
 		createEAttribute(parameterEClass, PARAMETER__LABEL);
 		createEAttribute(parameterEClass, PARAMETER__USAGE);
-		createEReference(parameterEClass, PARAMETER__CONSTRAINTS);
 		createEAttribute(parameterEClass, PARAMETER__GUIDELINE);
 		createEAttribute(parameterEClass, PARAMETER__VALUE);
 		createEReference(parameterEClass, PARAMETER__SELECT);
@@ -2747,10 +2702,6 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 		createEAttribute(responsiblePartyEClass, RESPONSIBLE_PARTY__PARTY_UUID);
 		createEReference(responsiblePartyEClass, RESPONSIBLE_PARTY__REMARK);
 
-		constraintEClass = createEClass(CONSTRAINT);
-		createEAttribute(constraintEClass, CONSTRAINT__DESCRIPTION);
-		createEReference(constraintEClass, CONSTRAINT__TESTS);
-
 		testEClass = createEClass(TEST);
 		createEAttribute(testEClass, TEST__EXPRESSION);
 		createEAttribute(testEClass, TEST__REMARK);
@@ -2867,9 +2818,9 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 		createEAttribute(setParameterEClass, SET_PARAMETER__VALUE);
 		createEReference(setParameterEClass, SET_PARAMETER__SELECT);
 
-		oscalConstraintEClass = createEClass(OSCAL_CONSTRAINT);
-		createEAttribute(oscalConstraintEClass, OSCAL_CONSTRAINT__DESCRIPTION);
-		createEReference(oscalConstraintEClass, OSCAL_CONSTRAINT__TESTS);
+		constraintEClass = createEClass(CONSTRAINT);
+		createEAttribute(constraintEClass, CONSTRAINT__DESCRIPTION);
+		createEReference(constraintEClass, CONSTRAINT__TESTS);
 
 		alterEClass = createEClass(ALTER);
 		createEAttribute(alterEClass, ALTER__CONTROL_ID);
@@ -2996,9 +2947,6 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getParameter_Usage(), this.getMarkupMultiline(), "usage", null, 0, 1, Parameter.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getParameter_Constraints(), this.getConstraint(), null, "constraints", null, 0, -1,
-				Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getParameter_Guideline(), this.getMarkupMultiline(), "guideline", null, 0, -1, Parameter.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getParameter_Value(), ecorePackage.getEString(), "value", null, 0, 1, Parameter.class,
@@ -3252,15 +3200,6 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 				ResponsibleParty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(constraintEClass, Constraint.class, "Constraint", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getConstraint_Description(), ecorePackage.getEString(), "description", null, 0, 1,
-				Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEReference(getConstraint_Tests(), this.getTest(), null, "tests", null, 0, -1, Constraint.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(testEClass, Test.class, "Test", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTest_Expression(), ecorePackage.getEString(), "expression", null, 1, 1, Test.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3475,7 +3414,7 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSetParameter_Usage(), this.getMarkupLine(), "usage", null, 0, 1, SetParameter.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSetParameter_Constraints(), this.getOSCALConstraint(), null, "constraints", null, 0, -1,
+		initEReference(getSetParameter_Constraints(), this.getConstraint(), null, "constraints", null, 0, -1,
 				SetParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSetParameter_Guideline(), this.getMarkupMultiline(), "guideline", null, 0, -1,
@@ -3487,12 +3426,12 @@ public class OscalPackageImpl extends EPackageImpl implements OscalPackage {
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(oscalConstraintEClass, OSCALConstraint.class, "OSCALConstraint", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(constraintEClass, Constraint.class, "Constraint", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getOSCALConstraint_Description(), this.getMarkupMultiline(), "description", null, 0, 1,
-				OSCALConstraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEAttribute(getConstraint_Description(), this.getMarkupMultiline(), "description", null, 0, 1,
+				Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEReference(getOSCALConstraint_Tests(), this.getTest(), null, "tests", null, 0, -1, OSCALConstraint.class,
+		initEReference(getConstraint_Tests(), this.getTest(), null, "tests", null, 0, -1, Constraint.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

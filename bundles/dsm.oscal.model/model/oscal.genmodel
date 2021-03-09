@@ -25,7 +25,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oscal.ecore#//Parameter/dependsOn"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oscal.ecore#//Parameter/label"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oscal.ecore#//Parameter/usage"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oscal.ecore#//Parameter/constraints"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oscal.ecore#//Parameter/guideline"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oscal.ecore#//Parameter/value"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oscal.ecore#//Parameter/select"/>
@@ -147,10 +146,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oscal.ecore#//ResponsibleParty/partyUuid"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oscal.ecore#//ResponsibleParty/remark"/>
     </genClasses>
-    <genClasses ecoreClass="oscal.ecore#//Constraint">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oscal.ecore#//Constraint/description"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oscal.ecore#//Constraint/tests"/>
-    </genClasses>
     <genClasses ecoreClass="oscal.ecore#//Test">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oscal.ecore#//Test/expression"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oscal.ecore#//Test/remark"/>
@@ -266,9 +261,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oscal.ecore#//SetParameter/value"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oscal.ecore#//SetParameter/select"/>
     </genClasses>
-    <genClasses ecoreClass="oscal.ecore#//OSCALConstraint">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oscal.ecore#//OSCALConstraint/description"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oscal.ecore#//OSCALConstraint/tests"/>
+    <genClasses ecoreClass="oscal.ecore#//Constraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oscal.ecore#//Constraint/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference oscal.ecore#//Constraint/tests"/>
     </genClasses>
     <genClasses ecoreClass="oscal.ecore#//Alter">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oscal.ecore#//Alter/controlId"/>

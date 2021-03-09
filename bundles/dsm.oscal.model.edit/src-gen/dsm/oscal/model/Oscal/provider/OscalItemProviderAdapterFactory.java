@@ -533,29 +533,6 @@ public class OscalItemProviderAdapterFactory extends OscalAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link dsm.oscal.model.Oscal.Constraint} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ConstraintItemProvider constraintItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link dsm.oscal.model.Oscal.Constraint}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createConstraintAdapter() {
-		if (constraintItemProvider == null) {
-			constraintItemProvider = new ConstraintItemProvider(this);
-		}
-
-		return constraintItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link dsm.oscal.model.Oscal.Test} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1016,26 +993,26 @@ public class OscalItemProviderAdapterFactory extends OscalAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link dsm.oscal.model.Oscal.OSCALConstraint} instances.
+	 * This keeps track of the one adapter used for all {@link dsm.oscal.model.Oscal.Constraint} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected OSCALConstraintItemProvider oscalConstraintItemProvider;
+	protected ConstraintItemProvider constraintItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link dsm.oscal.model.Oscal.OSCALConstraint}.
+	 * This creates an adapter for a {@link dsm.oscal.model.Oscal.Constraint}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createOSCALConstraintAdapter() {
-		if (oscalConstraintItemProvider == null) {
-			oscalConstraintItemProvider = new OSCALConstraintItemProvider(this);
+	public Adapter createConstraintAdapter() {
+		if (constraintItemProvider == null) {
+			constraintItemProvider = new ConstraintItemProvider(this);
 		}
 
-		return oscalConstraintItemProvider;
+		return constraintItemProvider;
 	}
 
 	/**
@@ -1269,8 +1246,6 @@ public class OscalItemProviderAdapterFactory extends OscalAdapterFactory
 			externalIdItemProvider.dispose();
 		if (responsiblePartyItemProvider != null)
 			responsiblePartyItemProvider.dispose();
-		if (constraintItemProvider != null)
-			constraintItemProvider.dispose();
 		if (testItemProvider != null)
 			testItemProvider.dispose();
 		if (partitionItemProvider != null)
@@ -1311,8 +1286,8 @@ public class OscalItemProviderAdapterFactory extends OscalAdapterFactory
 			customItemProvider.dispose();
 		if (setParameterItemProvider != null)
 			setParameterItemProvider.dispose();
-		if (oscalConstraintItemProvider != null)
-			oscalConstraintItemProvider.dispose();
+		if (constraintItemProvider != null)
+			constraintItemProvider.dispose();
 		if (alterItemProvider != null)
 			alterItemProvider.dispose();
 		if (removeItemProvider != null)

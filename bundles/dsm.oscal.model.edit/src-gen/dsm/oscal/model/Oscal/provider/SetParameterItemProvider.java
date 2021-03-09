@@ -286,7 +286,7 @@ public class SetParameterItemProvider extends PropertyOwnerItemProvider {
 				createChildParameter(OscalPackage.Literals.LINK_OWNER__LINKS, OscalFactory.eINSTANCE.createLink()));
 
 		newChildDescriptors.add(createChildParameter(OscalPackage.Literals.SET_PARAMETER__CONSTRAINTS,
-				OscalFactory.eINSTANCE.createOSCALConstraint()));
+				OscalFactory.eINSTANCE.createConstraint()));
 
 		newChildDescriptors.add(createChildParameter(OscalPackage.Literals.SET_PARAMETER__SELECT,
 				OscalFactory.eINSTANCE.createSelect()));

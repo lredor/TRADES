@@ -22,7 +22,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link dsm.oscal.model.Oscal.Parameter#getDependsOn <em>Depends On</em>}</li>
  *   <li>{@link dsm.oscal.model.Oscal.Parameter#getLabel <em>Label</em>}</li>
  *   <li>{@link dsm.oscal.model.Oscal.Parameter#getUsage <em>Usage</em>}</li>
- *   <li>{@link dsm.oscal.model.Oscal.Parameter#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link dsm.oscal.model.Oscal.Parameter#getGuideline <em>Guideline</em>}</li>
  *   <li>{@link dsm.oscal.model.Oscal.Parameter#getValue <em>Value</em>}</li>
  *   <li>{@link dsm.oscal.model.Oscal.Parameter#getSelect <em>Select</em>}</li>
@@ -151,18 +150,6 @@ public interface Parameter extends PropertyOwner, AnnotationOwner, LinkOwner {
 	 * @generated
 	 */
 	void setUsage(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Constraints</b></em>' containment reference list.
-	 * The list contents are of type {@link dsm.oscal.model.Oscal.Constraint}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Constraints</em>' containment reference list.
-	 * @see dsm.oscal.model.Oscal.OscalPackage#getParameter_Constraints()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Constraint> getConstraints();
 
 	/**
 	 * Returns the value of the '<em><b>Guideline</b></em>' attribute list.

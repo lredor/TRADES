@@ -4,9 +4,9 @@ package dsm.oscal.model.Oscal.impl;
 
 import dsm.oscal.model.Oscal.Annotation;
 import dsm.oscal.model.Oscal.AnnotationOwner;
+import dsm.oscal.model.Oscal.Constraint;
 import dsm.oscal.model.Oscal.Link;
 import dsm.oscal.model.Oscal.LinkOwner;
-import dsm.oscal.model.Oscal.OSCALConstraint;
 import dsm.oscal.model.Oscal.OscalPackage;
 import dsm.oscal.model.Oscal.Select;
 import dsm.oscal.model.Oscal.SetParameter;
@@ -179,7 +179,7 @@ public class SetParameterImpl extends PropertyOwnerImpl implements SetParameter 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<OSCALConstraint> constraints;
+	protected EList<Constraint> constraints;
 
 	/**
 	 * The cached value of the '{@link #getGuideline() <em>Guideline</em>}' attribute list.
@@ -367,9 +367,9 @@ public class SetParameterImpl extends PropertyOwnerImpl implements SetParameter 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<OSCALConstraint> getConstraints() {
+	public EList<Constraint> getConstraints() {
 		if (constraints == null) {
-			constraints = new EObjectContainmentEList<OSCALConstraint>(OSCALConstraint.class, this,
+			constraints = new EObjectContainmentEList<Constraint>(Constraint.class, this,
 					OscalPackage.SET_PARAMETER__CONSTRAINTS);
 		}
 		return constraints;
@@ -499,7 +499,7 @@ public class SetParameterImpl extends PropertyOwnerImpl implements SetParameter 
 			return;
 		case OscalPackage.SET_PARAMETER__CONSTRAINTS:
 			getConstraints().clear();
-			getConstraints().addAll((Collection<? extends OSCALConstraint>) newValue);
+			getConstraints().addAll((Collection<? extends Constraint>) newValue);
 			return;
 		case OscalPackage.SET_PARAMETER__GUIDELINE:
 			getGuideline().clear();

@@ -270,13 +270,6 @@ public class OscalSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case OscalPackage.CONSTRAINT: {
-			Constraint constraint = (Constraint) theEObject;
-			T result = caseConstraint(constraint);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case OscalPackage.TEST: {
 			Test test = (Test) theEObject;
 			T result = caseTest(test);
@@ -465,9 +458,9 @@ public class OscalSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case OscalPackage.OSCAL_CONSTRAINT: {
-			OSCALConstraint oscalConstraint = (OSCALConstraint) theEObject;
-			T result = caseOSCALConstraint(oscalConstraint);
+		case OscalPackage.CONSTRAINT: {
+			Constraint constraint = (Constraint) theEObject;
+			T result = caseConstraint(constraint);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -810,21 +803,6 @@ public class OscalSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseResponsibleParty(ResponsibleParty object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Constraint</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Constraint</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseConstraint(Constraint object) {
 		return null;
 	}
 
@@ -1189,17 +1167,17 @@ public class OscalSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>OSCAL Constraint</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Constraint</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>OSCAL Constraint</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Constraint</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseOSCALConstraint(OSCALConstraint object) {
+	public T caseConstraint(Constraint object) {
 		return null;
 	}
 

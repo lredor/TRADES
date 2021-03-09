@@ -202,15 +202,6 @@ public interface OscalFactory extends EFactory {
 	ResponsibleParty createResponsibleParty();
 
 	/**
-	 * Returns a new object of class '<em>Constraint</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Constraint</em>'.
-	 * @generated
-	 */
-	Constraint createConstraint();
-
-	/**
 	 * Returns a new object of class '<em>Test</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -391,13 +382,13 @@ public interface OscalFactory extends EFactory {
 	SetParameter createSetParameter();
 
 	/**
-	 * Returns a new object of class '<em>OSCAL Constraint</em>'.
+	 * Returns a new object of class '<em>Constraint</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>OSCAL Constraint</em>'.
+	 * @return a new object of class '<em>Constraint</em>'.
 	 * @generated
 	 */
-	OSCALConstraint createOSCALConstraint();
+	Constraint createConstraint();
 
 	/**
 	 * Returns a new object of class '<em>Alter</em>'.

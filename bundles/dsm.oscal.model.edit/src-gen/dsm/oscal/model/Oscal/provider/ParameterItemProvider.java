@@ -184,7 +184,6 @@ public class ParameterItemProvider extends PropertyOwnerItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(OscalPackage.Literals.ANNOTATION_OWNER__ANNOTATIONS);
 			childrenFeatures.add(OscalPackage.Literals.LINK_OWNER__LINKS);
-			childrenFeatures.add(OscalPackage.Literals.PARAMETER__CONSTRAINTS);
 			childrenFeatures.add(OscalPackage.Literals.PARAMETER__SELECT);
 		}
 		return childrenFeatures;
@@ -259,7 +258,6 @@ public class ParameterItemProvider extends PropertyOwnerItemProvider {
 			return;
 		case OscalPackage.PARAMETER__ANNOTATIONS:
 		case OscalPackage.PARAMETER__LINKS:
-		case OscalPackage.PARAMETER__CONSTRAINTS:
 		case OscalPackage.PARAMETER__SELECT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
@@ -283,9 +281,6 @@ public class ParameterItemProvider extends PropertyOwnerItemProvider {
 
 		newChildDescriptors.add(
 				createChildParameter(OscalPackage.Literals.LINK_OWNER__LINKS, OscalFactory.eINSTANCE.createLink()));
-
-		newChildDescriptors.add(createChildParameter(OscalPackage.Literals.PARAMETER__CONSTRAINTS,
-				OscalFactory.eINSTANCE.createConstraint()));
 
 		newChildDescriptors.add(
 				createChildParameter(OscalPackage.Literals.PARAMETER__SELECT, OscalFactory.eINSTANCE.createSelect()));

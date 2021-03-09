@@ -35,7 +35,7 @@ public interface Constraint extends EObject {
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
 	 * @see dsm.oscal.model.Oscal.OscalPackage#getConstraint_Description()
-	 * @model
+	 * @model dataType="dsm.oscal.model.Oscal.MarkupMultiline"
 	 * @generated
 	 */
 	String getDescription();

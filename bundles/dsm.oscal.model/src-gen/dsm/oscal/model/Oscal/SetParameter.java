@@ -154,7 +154,7 @@ public interface SetParameter extends PropertyOwner, AnnotationOwner, LinkOwner 
 
 	/**
 	 * Returns the value of the '<em><b>Constraints</b></em>' containment reference list.
-	 * The list contents are of type {@link dsm.oscal.model.Oscal.OSCALConstraint}.
+	 * The list contents are of type {@link dsm.oscal.model.Oscal.Constraint}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Constraints</em>' containment reference list.
@@ -162,7 +162,7 @@ public interface SetParameter extends PropertyOwner, AnnotationOwner, LinkOwner 
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<OSCALConstraint> getConstraints();
+	EList<Constraint> getConstraints();
 
 	/**
 	 * Returns the value of the '<em><b>Guideline</b></em>' attribute list.

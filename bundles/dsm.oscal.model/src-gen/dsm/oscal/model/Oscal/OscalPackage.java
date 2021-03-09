@@ -129,7 +129,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getPropertyOwner()
 	 * @generated
 	 */
-	int PROPERTY_OWNER = 28;
+	int PROPERTY_OWNER = 27;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -241,22 +241,13 @@ public interface OscalPackage extends EPackage {
 	int PARAMETER__USAGE = PROPERTY_OWNER_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER__CONSTRAINTS = PROPERTY_OWNER_FEATURE_COUNT + 7;
-
-	/**
 	 * The feature id for the '<em><b>Guideline</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__GUIDELINE = PROPERTY_OWNER_FEATURE_COUNT + 8;
+	int PARAMETER__GUIDELINE = PROPERTY_OWNER_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -265,7 +256,7 @@ public interface OscalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__VALUE = PROPERTY_OWNER_FEATURE_COUNT + 9;
+	int PARAMETER__VALUE = PROPERTY_OWNER_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Select</b></em>' containment reference.
@@ -274,7 +265,7 @@ public interface OscalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER__SELECT = PROPERTY_OWNER_FEATURE_COUNT + 10;
+	int PARAMETER__SELECT = PROPERTY_OWNER_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>Parameter</em>' class.
@@ -283,7 +274,7 @@ public interface OscalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_FEATURE_COUNT = PROPERTY_OWNER_FEATURE_COUNT + 11;
+	int PARAMETER_FEATURE_COUNT = PROPERTY_OWNER_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of operations of the '<em>Parameter</em>' class.
@@ -621,7 +612,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getParameterOwner()
 	 * @generated
 	 */
-	int PARAMETER_OWNER = 29;
+	int PARAMETER_OWNER = 28;
 
 	/**
 	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
@@ -1314,7 +1305,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getAnnotationOwner()
 	 * @generated
 	 */
-	int ANNOTATION_OWNER = 30;
+	int ANNOTATION_OWNER = 29;
 
 	/**
 	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
@@ -1863,52 +1854,6 @@ public interface OscalPackage extends EPackage {
 	int RESPONSIBLE_PARTY_OPERATION_COUNT = PROPERTY_OWNER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link dsm.oscal.model.Oscal.impl.ConstraintImpl <em>Constraint</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see dsm.oscal.model.Oscal.impl.ConstraintImpl
-	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getConstraint()
-	 * @generated
-	 */
-	int CONSTRAINT = 20;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT__DESCRIPTION = 0;
-
-	/**
-	 * The feature id for the '<em><b>Tests</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT__TESTS = 1;
-
-	/**
-	 * The number of structural features of the '<em>Constraint</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Constraint</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link dsm.oscal.model.Oscal.impl.TestImpl <em>Test</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1916,7 +1861,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getTest()
 	 * @generated
 	 */
-	int TEST = 21;
+	int TEST = 20;
 
 	/**
 	 * The feature id for the '<em><b>Expression</b></em>' attribute.
@@ -1962,7 +1907,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getPartition()
 	 * @generated
 	 */
-	int PARTITION = 22;
+	int PARTITION = 21;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -2062,7 +2007,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getSelect()
 	 * @generated
 	 */
-	int SELECT = 23;
+	int SELECT = 22;
 
 	/**
 	 * The feature id for the '<em><b>How Many</b></em>' attribute.
@@ -2108,7 +2053,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getResource()
 	 * @generated
 	 */
-	int RESOURCE = 24;
+	int RESOURCE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -2226,7 +2171,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getCitation()
 	 * @generated
 	 */
-	int CITATION = 25;
+	int CITATION = 24;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -2290,7 +2235,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getRlink()
 	 * @generated
 	 */
-	int RLINK = 26;
+	int RLINK = 25;
 
 	/**
 	 * The feature id for the '<em><b>Href</b></em>' attribute.
@@ -2345,7 +2290,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getHash()
 	 * @generated
 	 */
-	int HASH = 27;
+	int HASH = 26;
 
 	/**
 	 * The feature id for the '<em><b>Algorithm</b></em>' attribute.
@@ -2391,7 +2336,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getLinkOwner()
 	 * @generated
 	 */
-	int LINK_OWNER = 31;
+	int LINK_OWNER = 30;
 
 	/**
 	 * The feature id for the '<em><b>Links</b></em>' containment reference list.
@@ -2428,7 +2373,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getBase64()
 	 * @generated
 	 */
-	int BASE64 = 32;
+	int BASE64 = 31;
 
 	/**
 	 * The feature id for the '<em><b>File Name</b></em>' attribute.
@@ -2483,7 +2428,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getProfile()
 	 * @generated
 	 */
-	int PROFILE = 33;
+	int PROFILE = 32;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' containment reference.
@@ -2565,7 +2510,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getImport()
 	 * @generated
 	 */
-	int IMPORT = 34;
+	int IMPORT = 33;
 
 	/**
 	 * The feature id for the '<em><b>Herf</b></em>' attribute.
@@ -2620,7 +2565,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getMerge()
 	 * @generated
 	 */
-	int MERGE = 35;
+	int MERGE = 34;
 
 	/**
 	 * The feature id for the '<em><b>Combine</b></em>' containment reference list.
@@ -2657,7 +2602,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getModify()
 	 * @generated
 	 */
-	int MODIFY = 36;
+	int MODIFY = 35;
 
 	/**
 	 * The feature id for the '<em><b>Setparameters</b></em>' containment reference list.
@@ -2703,7 +2648,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getInclude()
 	 * @generated
 	 */
-	int INCLUDE = 37;
+	int INCLUDE = 36;
 
 	/**
 	 * The feature id for the '<em><b>All</b></em>' containment reference.
@@ -2758,7 +2703,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getExclude()
 	 * @generated
 	 */
-	int EXCLUDE = 38;
+	int EXCLUDE = 37;
 
 	/**
 	 * The feature id for the '<em><b>Calls</b></em>' containment reference list.
@@ -2804,7 +2749,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getAll()
 	 * @generated
 	 */
-	int ALL = 39;
+	int ALL = 38;
 
 	/**
 	 * The number of structural features of the '<em>All</em>' class.
@@ -2832,7 +2777,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getCall()
 	 * @generated
 	 */
-	int CALL = 40;
+	int CALL = 39;
 
 	/**
 	 * The feature id for the '<em><b>Contro Id</b></em>' attribute.
@@ -2878,7 +2823,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getMatch()
 	 * @generated
 	 */
-	int MATCH = 41;
+	int MATCH = 40;
 
 	/**
 	 * The feature id for the '<em><b>Pattern</b></em>' attribute.
@@ -2933,7 +2878,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getCombine()
 	 * @generated
 	 */
-	int COMBINE = 42;
+	int COMBINE = 41;
 
 	/**
 	 * The feature id for the '<em><b>Method</b></em>' attribute.
@@ -2988,7 +2933,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getCustom()
 	 * @generated
 	 */
-	int CUSTOM = 43;
+	int CUSTOM = 42;
 
 	/**
 	 * The feature id for the '<em><b>Groups</b></em>' containment reference list.
@@ -3043,7 +2988,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getSetParameter()
 	 * @generated
 	 */
-	int SET_PARAMETER = 44;
+	int SET_PARAMETER = 43;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -3172,14 +3117,14 @@ public interface OscalPackage extends EPackage {
 	int SET_PARAMETER_OPERATION_COUNT = PROPERTY_OWNER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link dsm.oscal.model.Oscal.impl.OSCALConstraintImpl <em>OSCAL Constraint</em>}' class.
+	 * The meta object id for the '{@link dsm.oscal.model.Oscal.impl.ConstraintImpl <em>Constraint</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see dsm.oscal.model.Oscal.impl.OSCALConstraintImpl
-	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getOSCALConstraint()
+	 * @see dsm.oscal.model.Oscal.impl.ConstraintImpl
+	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getConstraint()
 	 * @generated
 	 */
-	int OSCAL_CONSTRAINT = 45;
+	int CONSTRAINT = 44;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -3188,7 +3133,7 @@ public interface OscalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OSCAL_CONSTRAINT__DESCRIPTION = 0;
+	int CONSTRAINT__DESCRIPTION = 0;
 
 	/**
 	 * The feature id for the '<em><b>Tests</b></em>' containment reference list.
@@ -3197,25 +3142,25 @@ public interface OscalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OSCAL_CONSTRAINT__TESTS = 1;
+	int CONSTRAINT__TESTS = 1;
 
 	/**
-	 * The number of structural features of the '<em>OSCAL Constraint</em>' class.
+	 * The number of structural features of the '<em>Constraint</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OSCAL_CONSTRAINT_FEATURE_COUNT = 2;
+	int CONSTRAINT_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>OSCAL Constraint</em>' class.
+	 * The number of operations of the '<em>Constraint</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OSCAL_CONSTRAINT_OPERATION_COUNT = 0;
+	int CONSTRAINT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link dsm.oscal.model.Oscal.impl.AlterImpl <em>Alter</em>}' class.
@@ -3225,7 +3170,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getAlter()
 	 * @generated
 	 */
-	int ALTER = 46;
+	int ALTER = 45;
 
 	/**
 	 * The feature id for the '<em><b>Control Id</b></em>' attribute.
@@ -3280,7 +3225,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getRemove()
 	 * @generated
 	 */
-	int REMOVE = 47;
+	int REMOVE = 46;
 
 	/**
 	 * The feature id for the '<em><b>Name Ref</b></em>' attribute.
@@ -3344,7 +3289,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getAddition()
 	 * @generated
 	 */
-	int ADDITION = 48;
+	int ADDITION = 47;
 
 	/**
 	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
@@ -3444,7 +3389,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getNamedElement()
 	 * @generated
 	 */
-	int NAMED_ELEMENT = 49;
+	int NAMED_ELEMENT = 48;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3481,7 +3426,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getMarkupLine()
 	 * @generated
 	 */
-	int MARKUP_LINE = 50;
+	int MARKUP_LINE = 49;
 
 	/**
 	 * The meta object id for the '<em>Markup Multiline</em>' data type.
@@ -3491,7 +3436,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getMarkupMultiline()
 	 * @generated
 	 */
-	int MARKUP_MULTILINE = 51;
+	int MARKUP_MULTILINE = 50;
 
 	/**
 	 * The meta object id for the '<em>Base64 Binary</em>' data type.
@@ -3500,7 +3445,7 @@ public interface OscalPackage extends EPackage {
 	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getBase64Binary()
 	 * @generated
 	 */
-	int BASE64_BINARY = 52;
+	int BASE64_BINARY = 51;
 
 	/**
 	 * Returns the meta object for class '{@link dsm.oscal.model.Oscal.Link <em>Link</em>}'.
@@ -3620,17 +3565,6 @@ public interface OscalPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getParameter_Usage();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link dsm.oscal.model.Oscal.Parameter#getConstraints <em>Constraints</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Constraints</em>'.
-	 * @see dsm.oscal.model.Oscal.Parameter#getConstraints()
-	 * @see #getParameter()
-	 * @generated
-	 */
-	EReference getParameter_Constraints();
 
 	/**
 	 * Returns the meta object for the attribute list '{@link dsm.oscal.model.Oscal.Parameter#getGuideline <em>Guideline</em>}'.
@@ -4737,38 +4671,6 @@ public interface OscalPackage extends EPackage {
 	EReference getResponsibleParty_Remark();
 
 	/**
-	 * Returns the meta object for class '{@link dsm.oscal.model.Oscal.Constraint <em>Constraint</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Constraint</em>'.
-	 * @see dsm.oscal.model.Oscal.Constraint
-	 * @generated
-	 */
-	EClass getConstraint();
-
-	/**
-	 * Returns the meta object for the attribute '{@link dsm.oscal.model.Oscal.Constraint#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see dsm.oscal.model.Oscal.Constraint#getDescription()
-	 * @see #getConstraint()
-	 * @generated
-	 */
-	EAttribute getConstraint_Description();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link dsm.oscal.model.Oscal.Constraint#getTests <em>Tests</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Tests</em>'.
-	 * @see dsm.oscal.model.Oscal.Constraint#getTests()
-	 * @see #getConstraint()
-	 * @generated
-	 */
-	EReference getConstraint_Tests();
-
-	/**
 	 * Returns the meta object for class '{@link dsm.oscal.model.Oscal.Test <em>Test</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5757,36 +5659,36 @@ public interface OscalPackage extends EPackage {
 	EReference getSetParameter_Select();
 
 	/**
-	 * Returns the meta object for class '{@link dsm.oscal.model.Oscal.OSCALConstraint <em>OSCAL Constraint</em>}'.
+	 * Returns the meta object for class '{@link dsm.oscal.model.Oscal.Constraint <em>Constraint</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>OSCAL Constraint</em>'.
-	 * @see dsm.oscal.model.Oscal.OSCALConstraint
+	 * @return the meta object for class '<em>Constraint</em>'.
+	 * @see dsm.oscal.model.Oscal.Constraint
 	 * @generated
 	 */
-	EClass getOSCALConstraint();
+	EClass getConstraint();
 
 	/**
-	 * Returns the meta object for the attribute '{@link dsm.oscal.model.Oscal.OSCALConstraint#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link dsm.oscal.model.Oscal.Constraint#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see dsm.oscal.model.Oscal.OSCALConstraint#getDescription()
-	 * @see #getOSCALConstraint()
+	 * @see dsm.oscal.model.Oscal.Constraint#getDescription()
+	 * @see #getConstraint()
 	 * @generated
 	 */
-	EAttribute getOSCALConstraint_Description();
+	EAttribute getConstraint_Description();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link dsm.oscal.model.Oscal.OSCALConstraint#getTests <em>Tests</em>}'.
+	 * Returns the meta object for the containment reference list '{@link dsm.oscal.model.Oscal.Constraint#getTests <em>Tests</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Tests</em>'.
-	 * @see dsm.oscal.model.Oscal.OSCALConstraint#getTests()
-	 * @see #getOSCALConstraint()
+	 * @see dsm.oscal.model.Oscal.Constraint#getTests()
+	 * @see #getConstraint()
 	 * @generated
 	 */
-	EReference getOSCALConstraint_Tests();
+	EReference getConstraint_Tests();
 
 	/**
 	 * Returns the meta object for class '{@link dsm.oscal.model.Oscal.Alter <em>Alter</em>}'.
@@ -6106,14 +6008,6 @@ public interface OscalPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PARAMETER__USAGE = eINSTANCE.getParameter_Usage();
-
-		/**
-		 * The meta object literal for the '<em><b>Constraints</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PARAMETER__CONSTRAINTS = eINSTANCE.getParameter_Constraints();
 
 		/**
 		 * The meta object literal for the '<em><b>Guideline</b></em>' attribute list feature.
@@ -6968,32 +6862,6 @@ public interface OscalPackage extends EPackage {
 		EReference RESPONSIBLE_PARTY__REMARK = eINSTANCE.getResponsibleParty_Remark();
 
 		/**
-		 * The meta object literal for the '{@link dsm.oscal.model.Oscal.impl.ConstraintImpl <em>Constraint</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see dsm.oscal.model.Oscal.impl.ConstraintImpl
-		 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getConstraint()
-		 * @generated
-		 */
-		EClass CONSTRAINT = eINSTANCE.getConstraint();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CONSTRAINT__DESCRIPTION = eINSTANCE.getConstraint_Description();
-
-		/**
-		 * The meta object literal for the '<em><b>Tests</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONSTRAINT__TESTS = eINSTANCE.getConstraint_Tests();
-
-		/**
 		 * The meta object literal for the '{@link dsm.oscal.model.Oscal.impl.TestImpl <em>Test</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7778,14 +7646,14 @@ public interface OscalPackage extends EPackage {
 		EReference SET_PARAMETER__SELECT = eINSTANCE.getSetParameter_Select();
 
 		/**
-		 * The meta object literal for the '{@link dsm.oscal.model.Oscal.impl.OSCALConstraintImpl <em>OSCAL Constraint</em>}' class.
+		 * The meta object literal for the '{@link dsm.oscal.model.Oscal.impl.ConstraintImpl <em>Constraint</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see dsm.oscal.model.Oscal.impl.OSCALConstraintImpl
-		 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getOSCALConstraint()
+		 * @see dsm.oscal.model.Oscal.impl.ConstraintImpl
+		 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getConstraint()
 		 * @generated
 		 */
-		EClass OSCAL_CONSTRAINT = eINSTANCE.getOSCALConstraint();
+		EClass CONSTRAINT = eINSTANCE.getConstraint();
 
 		/**
 		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
@@ -7793,7 +7661,7 @@ public interface OscalPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute OSCAL_CONSTRAINT__DESCRIPTION = eINSTANCE.getOSCALConstraint_Description();
+		EAttribute CONSTRAINT__DESCRIPTION = eINSTANCE.getConstraint_Description();
 
 		/**
 		 * The meta object literal for the '<em><b>Tests</b></em>' containment reference list feature.
@@ -7801,7 +7669,7 @@ public interface OscalPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OSCAL_CONSTRAINT__TESTS = eINSTANCE.getOSCALConstraint_Tests();
+		EReference CONSTRAINT__TESTS = eINSTANCE.getConstraint_Tests();
 
 		/**
 		 * The meta object literal for the '{@link dsm.oscal.model.Oscal.impl.AlterImpl <em>Alter</em>}' class.

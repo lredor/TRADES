@@ -43,8 +43,6 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="#//MarkupLine"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="usage" eType="#//MarkupMultiline"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="constraints" upperBound="-1"
-        eType="#//Constraint" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="guideline" upperBound="-1"
         eType="#//MarkupMultiline">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -334,14 +332,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="remark" eType="#//Remark"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Constraint">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="A formal or informal expression of a constraint or test"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tests" upperBound="-1"
-        eType="#//Test" containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Test">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="A test expression which is expected to be evaluated by a tool"/>
@@ -604,7 +594,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="#//MarkupLine"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="usage" eType="#//MarkupLine"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="constraints" upperBound="-1"
-        eType="#//OSCALConstraint" containment="true"/>
+        eType="#//Constraint" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="guideline" upperBound="-1"
         eType="#//MarkupMultiline"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" upperBound="-1"
@@ -612,7 +602,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="select" upperBound="-1"
         eType="#//Select" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OSCALConstraint">
+  <eClassifiers xsi:type="ecore:EClass" name="Constraint">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="A formal or informal expression of a constraint or test"/>
     </eAnnotations>

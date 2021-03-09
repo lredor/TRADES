@@ -4,7 +4,6 @@ package dsm.oscal.model.Oscal.impl;
 
 import dsm.oscal.model.Oscal.Annotation;
 import dsm.oscal.model.Oscal.AnnotationOwner;
-import dsm.oscal.model.Oscal.Constraint;
 import dsm.oscal.model.Oscal.Link;
 import dsm.oscal.model.Oscal.LinkOwner;
 import dsm.oscal.model.Oscal.OscalPackage;
@@ -42,7 +41,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link dsm.oscal.model.Oscal.impl.ParameterImpl#getDependsOn <em>Depends On</em>}</li>
  *   <li>{@link dsm.oscal.model.Oscal.impl.ParameterImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link dsm.oscal.model.Oscal.impl.ParameterImpl#getUsage <em>Usage</em>}</li>
- *   <li>{@link dsm.oscal.model.Oscal.impl.ParameterImpl#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link dsm.oscal.model.Oscal.impl.ParameterImpl#getGuideline <em>Guideline</em>}</li>
  *   <li>{@link dsm.oscal.model.Oscal.impl.ParameterImpl#getValue <em>Value</em>}</li>
  *   <li>{@link dsm.oscal.model.Oscal.impl.ParameterImpl#getSelect <em>Select</em>}</li>
@@ -170,16 +168,6 @@ public class ParameterImpl extends PropertyOwnerImpl implements Parameter {
 	 * @ordered
 	 */
 	protected String usage = USAGE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getConstraints()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Constraint> constraints;
 
 	/**
 	 * The cached value of the '{@link #getGuideline() <em>Guideline</em>}' attribute list.
@@ -376,19 +364,6 @@ public class ParameterImpl extends PropertyOwnerImpl implements Parameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Constraint> getConstraints() {
-		if (constraints == null) {
-			constraints = new EObjectContainmentEList<Constraint>(Constraint.class, this,
-					OscalPackage.PARAMETER__CONSTRAINTS);
-		}
-		return constraints;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<String> getGuideline() {
 		if (guideline == null) {
 			guideline = new EDataTypeUniqueEList<String>(String.class, this, OscalPackage.PARAMETER__GUIDELINE);
@@ -479,8 +454,6 @@ public class ParameterImpl extends PropertyOwnerImpl implements Parameter {
 			return ((InternalEList<?>) getAnnotations()).basicRemove(otherEnd, msgs);
 		case OscalPackage.PARAMETER__LINKS:
 			return ((InternalEList<?>) getLinks()).basicRemove(otherEnd, msgs);
-		case OscalPackage.PARAMETER__CONSTRAINTS:
-			return ((InternalEList<?>) getConstraints()).basicRemove(otherEnd, msgs);
 		case OscalPackage.PARAMETER__SELECT:
 			return basicSetSelect(null, msgs);
 		}
@@ -509,8 +482,6 @@ public class ParameterImpl extends PropertyOwnerImpl implements Parameter {
 			return getLabel();
 		case OscalPackage.PARAMETER__USAGE:
 			return getUsage();
-		case OscalPackage.PARAMETER__CONSTRAINTS:
-			return getConstraints();
 		case OscalPackage.PARAMETER__GUIDELINE:
 			return getGuideline();
 		case OscalPackage.PARAMETER__VALUE:
@@ -552,10 +523,6 @@ public class ParameterImpl extends PropertyOwnerImpl implements Parameter {
 			return;
 		case OscalPackage.PARAMETER__USAGE:
 			setUsage((String) newValue);
-			return;
-		case OscalPackage.PARAMETER__CONSTRAINTS:
-			getConstraints().clear();
-			getConstraints().addAll((Collection<? extends Constraint>) newValue);
 			return;
 		case OscalPackage.PARAMETER__GUIDELINE:
 			getGuideline().clear();
@@ -600,9 +567,6 @@ public class ParameterImpl extends PropertyOwnerImpl implements Parameter {
 		case OscalPackage.PARAMETER__USAGE:
 			setUsage(USAGE_EDEFAULT);
 			return;
-		case OscalPackage.PARAMETER__CONSTRAINTS:
-			getConstraints().clear();
-			return;
 		case OscalPackage.PARAMETER__GUIDELINE:
 			getGuideline().clear();
 			return;
@@ -638,8 +602,6 @@ public class ParameterImpl extends PropertyOwnerImpl implements Parameter {
 			return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
 		case OscalPackage.PARAMETER__USAGE:
 			return USAGE_EDEFAULT == null ? usage != null : !USAGE_EDEFAULT.equals(usage);
-		case OscalPackage.PARAMETER__CONSTRAINTS:
-			return constraints != null && !constraints.isEmpty();
 		case OscalPackage.PARAMETER__GUIDELINE:
 			return guideline != null && !guideline.isEmpty();
 		case OscalPackage.PARAMETER__VALUE:
