@@ -13,6 +13,7 @@ import dsm.oscal.model.Oscal.Rlink;
 
 import java.util.Collection;
 
+import java.util.UUID;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -66,7 +67,7 @@ public class ResourceImpl extends PropertyOwnerImpl implements Resource {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String UUID_EDEFAULT = null;
+	protected static final UUID UUID_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getUuid() <em>Uuid</em>}' attribute.
@@ -76,7 +77,7 @@ public class ResourceImpl extends PropertyOwnerImpl implements Resource {
 	 * @generated
 	 * @ordered
 	 */
-	protected String uuid = UUID_EDEFAULT;
+	protected UUID uuid = UUID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getTitle() <em>Title</em>}' attribute.
@@ -215,7 +216,7 @@ public class ResourceImpl extends PropertyOwnerImpl implements Resource {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUuid() {
+	public UUID getUuid() {
 		return uuid;
 	}
 
@@ -224,8 +225,8 @@ public class ResourceImpl extends PropertyOwnerImpl implements Resource {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUuid(String newUuid) {
-		String oldUuid = uuid;
+	public void setUuid(UUID newUuid) {
+		UUID oldUuid = uuid;
 		uuid = newUuid;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, OscalPackage.RESOURCE__UUID, oldUuid, uuid));
@@ -485,7 +486,7 @@ public class ResourceImpl extends PropertyOwnerImpl implements Resource {
 			getAnnotations().addAll((Collection<? extends Annotation>) newValue);
 			return;
 		case OscalPackage.RESOURCE__UUID:
-			setUuid((String) newValue);
+			setUuid((UUID) newValue);
 			return;
 		case OscalPackage.RESOURCE__TITLE:
 			setTitle((String) newValue);

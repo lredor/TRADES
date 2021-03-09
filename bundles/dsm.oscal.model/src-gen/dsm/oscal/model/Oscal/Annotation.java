@@ -2,6 +2,7 @@
  */
 package dsm.oscal.model.Oscal;
 
+import java.util.UUID;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -62,12 +63,12 @@ public interface Annotation extends EObject {
 	 * A unique identifier that can be used to reference this annotated property elsewhere in an OSCAL document. A UUID should be consistantly used for a given location across revisions of the document
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Uuid</em>' attribute.
-	 * @see #setUuid(String)
+	 * @see #setUuid(UUID)
 	 * @see dsm.oscal.model.Oscal.OscalPackage#getAnnotation_Uuid()
-	 * @model
+	 * @model dataType="dsm.oscal.model.Oscal.UUID"
 	 * @generated
 	 */
-	String getUuid();
+	UUID getUuid();
 
 	/**
 	 * Sets the value of the '{@link dsm.oscal.model.Oscal.Annotation#getUuid <em>Uuid</em>}' attribute.
@@ -77,7 +78,7 @@ public interface Annotation extends EObject {
 	 * @see #getUuid()
 	 * @generated
 	 */
-	void setUuid(String value);
+	void setUuid(UUID value);
 
 	/**
 	 * Returns the value of the '<em><b>Ns</b></em>' attribute.

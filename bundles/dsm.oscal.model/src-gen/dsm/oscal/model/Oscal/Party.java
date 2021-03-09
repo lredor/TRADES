@@ -2,6 +2,7 @@
  */
 package dsm.oscal.model.Oscal;
 
+import java.util.UUID;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -38,12 +39,12 @@ public interface Party extends PropertyOwner, AnnotationOwner, LinkOwner, NamedE
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Uuid</em>' attribute.
-	 * @see #setUuid(String)
+	 * @see #setUuid(UUID)
 	 * @see dsm.oscal.model.Oscal.OscalPackage#getParty_Uuid()
-	 * @model required="true"
+	 * @model dataType="dsm.oscal.model.Oscal.UUID" required="true"
 	 * @generated
 	 */
-	String getUuid();
+	UUID getUuid();
 
 	/**
 	 * Sets the value of the '{@link dsm.oscal.model.Oscal.Party#getUuid <em>Uuid</em>}' attribute.
@@ -53,7 +54,7 @@ public interface Party extends PropertyOwner, AnnotationOwner, LinkOwner, NamedE
 	 * @see #getUuid()
 	 * @generated
 	 */
-	void setUuid(String value);
+	void setUuid(UUID value);
 
 	/**
 	 * Returns the value of the '<em><b>New Attribute</b></em>' attribute.
@@ -152,15 +153,15 @@ public interface Party extends PropertyOwner, AnnotationOwner, LinkOwner, NamedE
 
 	/**
 	 * Returns the value of the '<em><b>Location Uuids</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * The list contents are of type {@link java.util.UUID}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Location Uuids</em>' attribute list.
 	 * @see dsm.oscal.model.Oscal.OscalPackage#getParty_LocationUuids()
-	 * @model
+	 * @model dataType="dsm.oscal.model.Oscal.UUID"
 	 * @generated
 	 */
-	EList<String> getLocationUuids();
+	EList<UUID> getLocationUuids();
 
 	/**
 	 * Returns the value of the '<em><b>Member Of Organizations</b></em>' attribute list.

@@ -5,6 +5,7 @@ package dsm.oscal.model.Oscal.impl;
 import dsm.oscal.model.Oscal.OscalPackage;
 import dsm.oscal.model.Oscal.Property;
 
+import java.util.UUID;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -38,7 +39,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String UUID_EDEFAULT = null;
+	protected static final UUID UUID_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getUuid() <em>Uuid</em>}' attribute.
@@ -48,7 +49,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	 * @generated
 	 * @ordered
 	 */
-	protected String uuid = UUID_EDEFAULT;
+	protected UUID uuid = UUID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -154,7 +155,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUuid() {
+	public UUID getUuid() {
 		return uuid;
 	}
 
@@ -163,8 +164,8 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUuid(String newUuid) {
-		String oldUuid = uuid;
+	public void setUuid(UUID newUuid) {
+		UUID oldUuid = uuid;
 		uuid = newUuid;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, OscalPackage.PROPERTY__UUID, oldUuid, uuid));
@@ -286,7 +287,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case OscalPackage.PROPERTY__UUID:
-			setUuid((String) newValue);
+			setUuid((UUID) newValue);
 			return;
 		case OscalPackage.PROPERTY__NAME:
 			setName((String) newValue);

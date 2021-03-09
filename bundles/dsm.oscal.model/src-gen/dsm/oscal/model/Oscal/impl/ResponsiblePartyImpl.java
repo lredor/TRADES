@@ -12,6 +12,7 @@ import dsm.oscal.model.Oscal.ResponsibleParty;
 
 import java.util.Collection;
 
+import java.util.UUID;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -92,7 +93,7 @@ public class ResponsiblePartyImpl extends PropertyOwnerImpl implements Responsib
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> partyUuid;
+	protected EList<UUID> partyUuid;
 
 	/**
 	 * The cached value of the '{@link #getRemark() <em>Remark</em>}' containment reference.
@@ -175,10 +176,9 @@ public class ResponsiblePartyImpl extends PropertyOwnerImpl implements Responsib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getPartyUuid() {
+	public EList<UUID> getPartyUuid() {
 		if (partyUuid == null) {
-			partyUuid = new EDataTypeUniqueEList<String>(String.class, this,
-					OscalPackage.RESPONSIBLE_PARTY__PARTY_UUID);
+			partyUuid = new EDataTypeUniqueEList<UUID>(UUID.class, this, OscalPackage.RESPONSIBLE_PARTY__PARTY_UUID);
 		}
 		return partyUuid;
 	}
@@ -295,7 +295,7 @@ public class ResponsiblePartyImpl extends PropertyOwnerImpl implements Responsib
 			return;
 		case OscalPackage.RESPONSIBLE_PARTY__PARTY_UUID:
 			getPartyUuid().clear();
-			getPartyUuid().addAll((Collection<? extends String>) newValue);
+			getPartyUuid().addAll((Collection<? extends UUID>) newValue);
 			return;
 		case OscalPackage.RESPONSIBLE_PARTY__REMARK:
 			setRemark((Remark) newValue);

@@ -13,6 +13,8 @@
     <genDataTypes ecoreDataType="oscal.ecore#//MarkupLine"/>
     <genDataTypes ecoreDataType="oscal.ecore#//MarkupMultiline"/>
     <genDataTypes ecoreDataType="oscal.ecore#//Base64Binary"/>
+    <genDataTypes ecoreDataType="oscal.ecore#//UUID" create="return java.util.UUID.fromString(it);"
+        convert="return it != null ? it.toString() : null;"/>
     <genClasses ecoreClass="oscal.ecore#//Link">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oscal.ecore#//Link/href"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute oscal.ecore#//Link/rel"/>

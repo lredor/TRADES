@@ -14,6 +14,7 @@ import dsm.oscal.model.Oscal.TelephoneNumber;
 
 import java.util.Collection;
 
+import java.util.UUID;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -118,7 +119,7 @@ public class LocationImpl extends PropertyOwnerImpl implements Location {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String UUID_EDEFAULT = null;
+	protected static final UUID UUID_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getUuid() <em>Uuid</em>}' attribute.
@@ -128,7 +129,7 @@ public class LocationImpl extends PropertyOwnerImpl implements Location {
 	 * @generated
 	 * @ordered
 	 */
-	protected String uuid = UUID_EDEFAULT;
+	protected UUID uuid = UUID_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getTelephoneNumbers() <em>Telephone Numbers</em>}' containment reference list.
@@ -293,7 +294,7 @@ public class LocationImpl extends PropertyOwnerImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUuid() {
+	public UUID getUuid() {
 		return uuid;
 	}
 
@@ -302,8 +303,8 @@ public class LocationImpl extends PropertyOwnerImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUuid(String newUuid) {
-		String oldUuid = uuid;
+	public void setUuid(UUID newUuid) {
+		UUID oldUuid = uuid;
 		uuid = newUuid;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, OscalPackage.LOCATION__UUID, oldUuid, uuid));
@@ -463,7 +464,7 @@ public class LocationImpl extends PropertyOwnerImpl implements Location {
 			getEmailAddresses().addAll((Collection<? extends String>) newValue);
 			return;
 		case OscalPackage.LOCATION__UUID:
-			setUuid((String) newValue);
+			setUuid((UUID) newValue);
 			return;
 		case OscalPackage.LOCATION__TELEPHONE_NUMBERS:
 			getTelephoneNumbers().clear();

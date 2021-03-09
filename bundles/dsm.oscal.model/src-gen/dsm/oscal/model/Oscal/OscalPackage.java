@@ -3448,6 +3448,16 @@ public interface OscalPackage extends EPackage {
 	int BASE64_BINARY = 51;
 
 	/**
+	 * The meta object id for the '<em>UUID</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.util.UUID
+	 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getUUID()
+	 * @generated
+	 */
+	int UUID = 52;
+
+	/**
 	 * Returns the meta object for class '{@link dsm.oscal.model.Oscal.Link <em>Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5895,6 +5905,17 @@ public interface OscalPackage extends EPackage {
 	EDataType getBase64Binary();
 
 	/**
+	 * Returns the meta object for data type '{@link java.util.UUID <em>UUID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>UUID</em>'.
+	 * @see java.util.UUID
+	 * @model instanceClass="java.util.UUID"
+	 * @generated
+	 */
+	EDataType getUUID();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7835,6 +7856,16 @@ public interface OscalPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType BASE64_BINARY = eINSTANCE.getBase64Binary();
+
+		/**
+		 * The meta object literal for the '<em>UUID</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.util.UUID
+		 * @see dsm.oscal.model.Oscal.impl.OscalPackageImpl#getUUID()
+		 * @generated
+		 */
+		EDataType UUID = eINSTANCE.getUUID();
 
 	}
 

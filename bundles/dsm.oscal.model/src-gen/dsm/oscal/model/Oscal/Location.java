@@ -2,6 +2,7 @@
  */
 package dsm.oscal.model.Oscal;
 
+import java.util.UUID;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -92,12 +93,12 @@ public interface Location extends PropertyOwner, AnnotationOwner, LinkOwner {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Uuid</em>' attribute.
-	 * @see #setUuid(String)
+	 * @see #setUuid(UUID)
 	 * @see dsm.oscal.model.Oscal.OscalPackage#getLocation_Uuid()
-	 * @model
+	 * @model dataType="dsm.oscal.model.Oscal.UUID"
 	 * @generated
 	 */
-	String getUuid();
+	UUID getUuid();
 
 	/**
 	 * Sets the value of the '{@link dsm.oscal.model.Oscal.Location#getUuid <em>Uuid</em>}' attribute.
@@ -107,7 +108,7 @@ public interface Location extends PropertyOwner, AnnotationOwner, LinkOwner {
 	 * @see #getUuid()
 	 * @generated
 	 */
-	void setUuid(String value);
+	void setUuid(UUID value);
 
 	/**
 	 * Returns the value of the '<em><b>Telephone Numbers</b></em>' containment reference list.

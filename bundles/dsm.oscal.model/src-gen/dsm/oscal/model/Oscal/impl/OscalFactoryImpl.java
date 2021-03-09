@@ -4,6 +4,7 @@ package dsm.oscal.model.Oscal.impl;
 
 import dsm.oscal.model.Oscal.*;
 
+import java.util.UUID;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -165,6 +166,8 @@ public class OscalFactoryImpl extends EFactoryImpl implements OscalFactory {
 			return createMarkupMultilineFromString(eDataType, initialValue);
 		case OscalPackage.BASE64_BINARY:
 			return createBase64BinaryFromString(eDataType, initialValue);
+		case OscalPackage.UUID:
+			return createUUIDFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -184,6 +187,8 @@ public class OscalFactoryImpl extends EFactoryImpl implements OscalFactory {
 			return convertMarkupMultilineToString(eDataType, instanceValue);
 		case OscalPackage.BASE64_BINARY:
 			return convertBase64BinaryToString(eDataType, instanceValue);
+		case OscalPackage.UUID:
+			return convertUUIDToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -691,6 +696,42 @@ public class OscalFactoryImpl extends EFactoryImpl implements OscalFactory {
 	 */
 	public String convertBase64BinaryToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UUID createUUID(final String it) {
+		return java.util.UUID.fromString(it);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UUID createUUIDFromString(EDataType eDataType, String initialValue) {
+		return createUUID(initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertUUID(final UUID it) {
+		return it != null ? it.toString() : null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertUUIDToString(EDataType eDataType, Object instanceValue) {
+		return convertUUID((UUID) instanceValue);
 	}
 
 	/**

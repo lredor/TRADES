@@ -11,6 +11,7 @@ import dsm.oscal.model.Oscal.OscalPackage;
 
 import java.util.Collection;
 
+import java.util.UUID;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -50,7 +51,7 @@ public class CatalogImpl extends ParameterOwnerImpl implements Catalog {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String UUID_EDEFAULT = null;
+	protected static final UUID UUID_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getUuid() <em>Uuid</em>}' attribute.
@@ -60,7 +61,7 @@ public class CatalogImpl extends ParameterOwnerImpl implements Catalog {
 	 * @generated
 	 * @ordered
 	 */
-	protected String uuid = UUID_EDEFAULT;
+	protected UUID uuid = UUID_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getMetadata() <em>Metadata</em>}' containment reference.
@@ -126,7 +127,7 @@ public class CatalogImpl extends ParameterOwnerImpl implements Catalog {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUuid() {
+	public UUID getUuid() {
 		return uuid;
 	}
 
@@ -135,8 +136,8 @@ public class CatalogImpl extends ParameterOwnerImpl implements Catalog {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUuid(String newUuid) {
-		String oldUuid = uuid;
+	public void setUuid(UUID newUuid) {
+		UUID oldUuid = uuid;
 		uuid = newUuid;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, OscalPackage.CATALOG__UUID, oldUuid, uuid));
@@ -319,7 +320,7 @@ public class CatalogImpl extends ParameterOwnerImpl implements Catalog {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case OscalPackage.CATALOG__UUID:
-			setUuid((String) newValue);
+			setUuid((UUID) newValue);
 			return;
 		case OscalPackage.CATALOG__METADATA:
 			setMetadata((Metadata) newValue);

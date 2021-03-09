@@ -9,6 +9,7 @@ import dsm.oscal.model.Oscal.Profile;
 import java.util.Collection;
 import java.util.List;
 
+import java.util.UUID;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -139,7 +140,8 @@ public class ProfileItemProvider extends ItemProviderAdapter implements IEditing
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Profile) object).getUuid();
+		UUID labelValue = ((Profile) object).getUuid();
+		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ? getString("_UI_Profile_type")
 				: getString("_UI_Profile_type") + " " + label;
 	}

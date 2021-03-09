@@ -9,6 +9,7 @@ import dsm.oscal.model.Oscal.Resource;
 import java.util.Collection;
 import java.util.List;
 
+import java.util.UUID;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -182,7 +183,8 @@ public class ResourceItemProvider extends PropertyOwnerItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Resource) object).getUuid();
+		UUID labelValue = ((Resource) object).getUuid();
+		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ? getString("_UI_Resource_type")
 				: getString("_UI_Resource_type") + " " + label;
 	}

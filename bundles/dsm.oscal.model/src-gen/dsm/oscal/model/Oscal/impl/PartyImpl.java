@@ -15,6 +15,7 @@ import dsm.oscal.model.Oscal.TelephoneNumber;
 
 import java.util.Collection;
 
+import java.util.UUID;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -102,7 +103,7 @@ public class PartyImpl extends PropertyOwnerImpl implements Party {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String UUID_EDEFAULT = null;
+	protected static final UUID UUID_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getUuid() <em>Uuid</em>}' attribute.
@@ -112,7 +113,7 @@ public class PartyImpl extends PropertyOwnerImpl implements Party {
 	 * @generated
 	 * @ordered
 	 */
-	protected String uuid = UUID_EDEFAULT;
+	protected UUID uuid = UUID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getNewAttribute() <em>New Attribute</em>}' attribute.
@@ -202,7 +203,7 @@ public class PartyImpl extends PropertyOwnerImpl implements Party {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> locationUuids;
+	protected EList<UUID> locationUuids;
 
 	/**
 	 * The cached value of the '{@link #getMemberOfOrganizations() <em>Member Of Organizations</em>}' attribute list.
@@ -284,7 +285,7 @@ public class PartyImpl extends PropertyOwnerImpl implements Party {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUuid() {
+	public UUID getUuid() {
 		return uuid;
 	}
 
@@ -293,8 +294,8 @@ public class PartyImpl extends PropertyOwnerImpl implements Party {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUuid(String newUuid) {
-		String oldUuid = uuid;
+	public void setUuid(UUID newUuid) {
+		UUID oldUuid = uuid;
 		uuid = newUuid;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, OscalPackage.PARTY__UUID, oldUuid, uuid));
@@ -399,9 +400,9 @@ public class PartyImpl extends PropertyOwnerImpl implements Party {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getLocationUuids() {
+	public EList<UUID> getLocationUuids() {
 		if (locationUuids == null) {
-			locationUuids = new EDataTypeUniqueEList<String>(String.class, this, OscalPackage.PARTY__LOCATION_UUIDS);
+			locationUuids = new EDataTypeUniqueEList<UUID>(UUID.class, this, OscalPackage.PARTY__LOCATION_UUIDS);
 		}
 		return locationUuids;
 	}
@@ -498,7 +499,7 @@ public class PartyImpl extends PropertyOwnerImpl implements Party {
 			setName((String) newValue);
 			return;
 		case OscalPackage.PARTY__UUID:
-			setUuid((String) newValue);
+			setUuid((UUID) newValue);
 			return;
 		case OscalPackage.PARTY__NEW_ATTRIBUTE:
 			setNewAttribute((String) newValue);
@@ -524,7 +525,7 @@ public class PartyImpl extends PropertyOwnerImpl implements Party {
 			return;
 		case OscalPackage.PARTY__LOCATION_UUIDS:
 			getLocationUuids().clear();
-			getLocationUuids().addAll((Collection<? extends String>) newValue);
+			getLocationUuids().addAll((Collection<? extends UUID>) newValue);
 			return;
 		case OscalPackage.PARTY__MEMBER_OF_ORGANIZATIONS:
 			getMemberOfOrganizations().clear();

@@ -2,6 +2,7 @@
  */
 package dsm.oscal.model.Oscal;
 
+import java.util.UUID;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -54,15 +55,15 @@ public interface ResponsibleParty extends PropertyOwner, AnnotationOwner, LinkOw
 
 	/**
 	 * Returns the value of the '<em><b>Party Uuid</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * The list contents are of type {@link java.util.UUID}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Party Uuid</em>' attribute list.
 	 * @see dsm.oscal.model.Oscal.OscalPackage#getResponsibleParty_PartyUuid()
-	 * @model
+	 * @model dataType="dsm.oscal.model.Oscal.UUID"
 	 * @generated
 	 */
-	EList<String> getPartyUuid();
+	EList<UUID> getPartyUuid();
 
 	/**
 	 * Returns the value of the '<em><b>Remark</b></em>' containment reference.

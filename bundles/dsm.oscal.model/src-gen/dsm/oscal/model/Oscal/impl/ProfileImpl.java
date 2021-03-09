@@ -12,6 +12,7 @@ import dsm.oscal.model.Oscal.Profile;
 
 import java.util.Collection;
 
+import java.util.UUID;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -103,7 +104,7 @@ public class ProfileImpl extends MinimalEObjectImpl.Container implements Profile
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String UUID_EDEFAULT = null;
+	protected static final UUID UUID_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getUuid() <em>Uuid</em>}' attribute.
@@ -113,7 +114,7 @@ public class ProfileImpl extends MinimalEObjectImpl.Container implements Profile
 	 * @generated
 	 * @ordered
 	 */
-	protected String uuid = UUID_EDEFAULT;
+	protected UUID uuid = UUID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -349,7 +350,7 @@ public class ProfileImpl extends MinimalEObjectImpl.Container implements Profile
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUuid() {
+	public UUID getUuid() {
 		return uuid;
 	}
 
@@ -358,8 +359,8 @@ public class ProfileImpl extends MinimalEObjectImpl.Container implements Profile
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUuid(String newUuid) {
-		String oldUuid = uuid;
+	public void setUuid(UUID newUuid) {
+		UUID oldUuid = uuid;
 		uuid = newUuid;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, OscalPackage.PROFILE__UUID, oldUuid, uuid));
@@ -437,7 +438,7 @@ public class ProfileImpl extends MinimalEObjectImpl.Container implements Profile
 			setBackmatter((BackMatter) newValue);
 			return;
 		case OscalPackage.PROFILE__UUID:
-			setUuid((String) newValue);
+			setUuid((UUID) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

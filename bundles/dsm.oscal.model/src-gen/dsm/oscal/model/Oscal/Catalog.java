@@ -2,6 +2,7 @@
  */
 package dsm.oscal.model.Oscal;
 
+import java.util.UUID;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -37,12 +38,12 @@ public interface Catalog extends ParameterOwner {
 	 * A globally unique identifier for this catalog instance. This UUID should be changed when this document is revised.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Uuid</em>' attribute.
-	 * @see #setUuid(String)
+	 * @see #setUuid(UUID)
 	 * @see dsm.oscal.model.Oscal.OscalPackage#getCatalog_Uuid()
-	 * @model
+	 * @model dataType="dsm.oscal.model.Oscal.UUID"
 	 * @generated
 	 */
-	String getUuid();
+	UUID getUuid();
 
 	/**
 	 * Sets the value of the '{@link dsm.oscal.model.Oscal.Catalog#getUuid <em>Uuid</em>}' attribute.
@@ -52,7 +53,7 @@ public interface Catalog extends ParameterOwner {
 	 * @see #getUuid()
 	 * @generated
 	 */
-	void setUuid(String value);
+	void setUuid(UUID value);
 
 	/**
 	 * Returns the value of the '<em><b>Metadata</b></em>' containment reference.

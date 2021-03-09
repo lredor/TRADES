@@ -9,6 +9,7 @@ import dsm.oscal.model.Oscal.OscalPackage;
 import java.util.Collection;
 import java.util.List;
 
+import java.util.UUID;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -129,7 +130,8 @@ public class CatalogItemProvider extends ParameterOwnerItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Catalog) object).getUuid();
+		UUID labelValue = ((Catalog) object).getUuid();
+		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ? getString("_UI_Catalog_type")
 				: getString("_UI_Catalog_type") + " " + label;
 	}

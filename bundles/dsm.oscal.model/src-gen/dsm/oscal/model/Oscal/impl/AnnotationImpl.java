@@ -6,6 +6,7 @@ import dsm.oscal.model.Oscal.Annotation;
 import dsm.oscal.model.Oscal.OscalPackage;
 import dsm.oscal.model.Oscal.Remark;
 
+import java.util.UUID;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -61,7 +62,7 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String UUID_EDEFAULT = null;
+	protected static final UUID UUID_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getUuid() <em>Uuid</em>}' attribute.
@@ -71,7 +72,7 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
 	 * @generated
 	 * @ordered
 	 */
-	protected String uuid = UUID_EDEFAULT;
+	protected UUID uuid = UUID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getNs() <em>Ns</em>}' attribute.
@@ -168,7 +169,7 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUuid() {
+	public UUID getUuid() {
 		return uuid;
 	}
 
@@ -177,8 +178,8 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUuid(String newUuid) {
-		String oldUuid = uuid;
+	public void setUuid(UUID newUuid) {
+		UUID oldUuid = uuid;
 		uuid = newUuid;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, OscalPackage.ANNOTATION__UUID, oldUuid, uuid));
@@ -324,7 +325,7 @@ public class AnnotationImpl extends MinimalEObjectImpl.Container implements Anno
 			setName((String) newValue);
 			return;
 		case OscalPackage.ANNOTATION__UUID:
-			setUuid((String) newValue);
+			setUuid((UUID) newValue);
 			return;
 		case OscalPackage.ANNOTATION__NS:
 			setNs((String) newValue);
